@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update AS list</title>
+</head>
+
+<body>
+
+<h1>Update List of Autonomous Systems</h1>
+
+Aktueller Datenstand:<br />
+<table border="1">
+<tr>
+<th>Source</td>
+<th>included?</td>
+<th>last update</td>
+<th>number of ASNs</td>
+</tr>
+<tr>
+<td>Maxmind</td>
+<td>yes</td>
+<td>2015-11-15</td>
+<td>50762</td>
+</tr>
+<tr>
+<td>CIDR</td>
+<td>yes</td>
+<td>2015-11-15</td>
+<td>73462</td>
+</tr>
+<tr>
+<td>Hurricane Electric</td>
+<td>yes</td>
+<td>2015-11-15</td>
+<td>52488</td>
+</tr>
+</table>
+<br />
+Total number of unique ASNs: 76290
+.. davon part von RIPE: 78726
+
+<br />
+<br />
+
+<form name="UpdateASList" action="update_as_list.php" id="" method="POST">
+
+<label for="target">Choose data source:</label><br />
+<select name="protocol" size="1">
+    <option value="Maxmind">Maxmind</option>
+    <option value="CIDR">CIDR</option>
+    <option value="HE">Hurricane Electric</option>
+    <option value="all">all available</option>
+</select>
+<br />
+
+<button type="submit">update now</button>
+</form>
+
+<br />
+<br />
+
+<button type="submit">check consistency of different sources</button>
+
+</body>
+
+</html>
